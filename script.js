@@ -127,7 +127,7 @@ const renderAllPlayers = (playerList) => {
     playerCard.innerHTML = `
       <img src="${player.imageUrl}" alt="${player.name}" />
       <h3>${player.name}</h3>
-      <p>Id: ${player.id}</p>
+      <p><strong>ID</strong>: ${player.id}</p>
     `;
 
     const buttonContainer = document.createElement("div");
@@ -186,6 +186,7 @@ const renderSinglePlayer = (player) => {
   onePlayerCard.innerHTML = `
       <img src="${player.imageUrl}" alt="${player.name}" />
       <h3>${player.name}</h3>
+      <p><strong>ID:</strong> ${player.id}</p>
       <p><strong>Breed:</strong> ${player.breed}</p>
       <p><strong>Team:</strong> ${player.team?.name || "Unassigned"}</p>
       <p><strong>Status:</strong> ${player.status}</p>
