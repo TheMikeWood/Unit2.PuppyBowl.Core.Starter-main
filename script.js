@@ -127,8 +127,6 @@ const renderAllPlayers = (playerList) => {
     playerCard.innerHTML = `
       <img src="${player.imageUrl}" alt="${player.name}" />
       <h3>${player.name}</h3>
-      <p>Breed: ${player.breed}</p>
-      
       <p>Id: ${player.id}</p>
     `;
 
@@ -147,9 +145,13 @@ const renderAllPlayers = (playerList) => {
     deleteButton.textContent = "Remove Player";
     deleteButton.classList.add("delete-button");
     deleteButton.addEventListener("click", async () => {
-      removePlayer(player.id);
-      const updatedPlayers = await fetchAllPlayers();
-      renderAllPlayers(updatedPlayers);
+      try {
+        removePlayer(player.id);
+        const updatedPlayers = await fetchAllPlayers();
+        renderAllPlayers(updatedPlayers);
+      } catch (err) {
+        console.error("Failed to delete player or update the list", err);
+      }
     });
     buttonContainer.appendChild(details);
     buttonContainer.appendChild(deleteButton);
@@ -185,7 +187,6 @@ const renderSinglePlayer = (player) => {
       <img src="${player.imageUrl}" alt="${player.name}" />
       <h3>${player.name}</h3>
       <p><strong>Breed:</strong> ${player.breed}</p>
-      <p><strong>ID:</strong> ${player.id}</p>
       <p><strong>Team:</strong> ${player.team?.name || "Unassigned"}</p>
       <p><strong>Status:</strong> ${player.status}</p>
     `;
