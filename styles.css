@@ -1,5 +1,214 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #f1c40f;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.player-card {
+  border: 2px solid #f1c40f;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #333;
+  width: 200px;
+  text-align: center;
+  color: white;
+}
+
+.player-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.player-card h3 {
+  margin: 0.5rem 0;
+  color: #f1c40f;
+}
+
+.player-card:hover {
+  background-color: #444;
+  border-color: #f39c12;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+
+button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.details-button {
+  background-color: #f1c40f;
+}
+
+.details-button:hover {
+  background-color: #d4ac0d;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.delete-button {
+  background-color: #333;
+  color: #f1c40f;
+}
+
+.delete-button:hover {
+  background-color: #5f5f5f;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.one-player-card {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.one-player-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.one-player-card h3 {
+  margin-top: 1rem;
+}
+
+.one-player-card p {
+  margin: 0.5rem 0;
+}
+
+.one-player-card button {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: #f1c40f; /* Gold */
+  color: #000; /* Black */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.one-player-card button:hover {
+  background-color: #d4ac0d; /* Darker gold */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.one-player-card button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for the new player form */
+#new-player-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: #1a1a1a; /* Black background */
+  border: 1px solid #ffd700; /* Gold border */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+#new-player-form label {
+  color: #ffd700; /* Gold text for labels */
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-right: 0.5rem;
+  min-width: 70px; /* Ensures alignment across labels */
+  text-align: right;
+}
+
+#new-player-form input,
+#new-player-form select {
+  flex: 1 1 auto;
+  min-width: 150px;
+  padding: 0.5rem;
+  border: 1px solid #ffd700; /* Gold border */
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background-color: #333333; /* Dark gray background */
+  color: #ffd700; /* Gold text */
+  transition: all 0.3s ease;
+}
+
+#new-player-form input:focus,
+#new-player-form select:focus {
+  outline: none;
+  border-color: #ffd700;
+  background-color: #444444; /* Slightly lighter gray on focus */
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.6); /* Gold glow */
+  color: #ffffff; /* White text on focus */
+}
+
+#new-player-form button[type="submit"] {
+  flex: 0 0 auto;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #1a1a1a; /* Black text */
+  background-color: #ffd700; /* Gold background */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#new-player-form button[type="submit"]:hover {
+  background-color: #e6c200; /* Slightly darker gold */
+}
+
+#new-player-form button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+#new-player-form button[type="submit"]:disabled {
+  background-color: #666666; /* Dark gray for disabled state */
+  color: #cccccc; /* Light gray text */
+  cursor: not-allowed;
 }
