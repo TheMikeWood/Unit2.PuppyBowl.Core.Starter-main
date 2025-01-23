@@ -243,6 +243,7 @@ const renderNewPlayerForm = () => {
           breed: form.breed.value,
           status: form.status.value,
           imageUrl: form.imageUrl.value,
+          teamId: form.teamId.value,
         };
 
         await addNewPlayer(playerData);
