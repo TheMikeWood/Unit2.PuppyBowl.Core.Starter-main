@@ -123,14 +123,14 @@ button:active {
   border-radius: 8px;
   font-size: 1rem;
   font-weight: bold;
-  background-color: #f1c40f; /* Gold */
-  color: #000; /* Black */
+  background-color: #f1c40f;
+  color: #000;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .one-player-card button:hover {
-  background-color: #d4ac0d; /* Darker gold */
+  background-color: #d4ac0d;
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
@@ -140,7 +140,6 @@ button:active {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Style for the new player form */
 #new-player-form {
   display: flex;
   flex-wrap: wrap;
@@ -148,18 +147,18 @@ button:active {
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  background-color: #1a1a1a; /* Black background */
-  border: 1px solid #ffd700; /* Gold border */
+  background-color: #1a1a1a;
+  border: 1px solid #ffd700;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 #new-player-form label {
-  color: #ffd700; /* Gold text for labels */
+  color: #ffd700;
   font-size: 0.8rem;
   font-weight: bold;
   margin-right: 0.5rem;
-  min-width: 70px; /* Ensures alignment across labels */
+  min-width: 70px;
   text-align: right;
 }
 
@@ -168,11 +167,11 @@ button:active {
   flex: 1 1 auto;
   min-width: 150px;
   padding: 0.5rem;
-  border: 1px solid #ffd700; /* Gold border */
+  border: 1px solid #ffd700;
   border-radius: 8px;
   font-size: 0.9rem;
-  background-color: #333333; /* Dark gray background */
-  color: #ffd700; /* Gold text */
+  background-color: #333333;
+  color: #ffd700;
   transition: all 0.3s ease;
 }
 
@@ -180,19 +179,17 @@ button:active {
 #new-player-form select:focus {
   outline: none;
   border-color: #ffd700;
-  background-color: #444444; /* Slightly lighter gray on focus */
-  box-shadow: 0 0 5px rgba(255, 215, 0, 0.6); /* Gold glow */
-  color: #ffffff; /* White text on focus */
+  background-color: #444444;
+  box-shadow: 0 0 5px rgba(255, 215, 0, 0.6);
+  color: #ffffff;
 }
-
 #new-player-form button[type="submit"] {
   flex: 0 0 auto;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
   font-weight: bold;
-  color: #1a1a1a; /* Black text */
-  background-color: #ffd700; /* Gold background */
-  border: none;
+  color: #1a1a1a;
+  background-color: #ffd700;
   border-radius: 8px;
   cursor: pointer;
   text-align: center;
@@ -200,7 +197,7 @@ button:active {
 }
 
 #new-player-form button[type="submit"]:hover {
-  background-color: #e6c200; /* Slightly darker gold */
+  background-color: #e6c200;
 }
 
 #new-player-form button[type="submit"]:active {
@@ -208,7 +205,7 @@ button:active {
 }
 
 #new-player-form button[type="submit"]:disabled {
-  background-color: #666666; /* Dark gray for disabled state */
-  color: #cccccc; /* Light gray text */
+  background-color: #666666;
+  color: #cccccc;
   cursor: not-allowed;
 }
